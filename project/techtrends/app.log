@@ -1,0 +1,71 @@
+INFO:werkzeug: * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+INFO:app:Metrics request successfull
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2021 09:58:23] "GET /metrics HTTP/1.1" 200 -
+12/09/2021 10:21:11 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:21:13 AM Metrics request successfull
+12/09/2021 10:21:13 AM 127.0.0.1 - - [09/Dec/2021 10:21:13] "GET /metrics HTTP/1.1" 200 -
+12/09/2021 10:21:16 AM Metrics request successfull
+12/09/2021 10:21:16 AM 127.0.0.1 - - [09/Dec/2021 10:21:16] "GET /metrics HTTP/1.1" 200 -
+12/09/2021 10:24:33 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:24:37 AM 127.0.0.1 - - [09/Dec/2021 10:24:37] "GET / HTTP/1.1" 200 -
+12/09/2021 10:24:39 AM Article <sqlite3.Row object at 0x105736b70> retrieved
+12/09/2021 10:24:39 AM 127.0.0.1 - - [09/Dec/2021 10:24:39] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:24:42 AM Article <sqlite3.Row object at 0x1057312f0> retrieved
+12/09/2021 10:24:42 AM 127.0.0.1 - - [09/Dec/2021 10:24:42] "GET /2 HTTP/1.1" 200 -
+12/09/2021 10:24:45 AM Article <sqlite3.Row object at 0x105731490> retrieved
+12/09/2021 10:24:45 AM 127.0.0.1 - - [09/Dec/2021 10:24:45] "GET /3 HTTP/1.1" 200 -
+12/09/2021 10:24:48 AM Article <sqlite3.Row object at 0x1055aff10> retrieved
+12/09/2021 10:24:48 AM 127.0.0.1 - - [09/Dec/2021 10:24:48] "GET /4 HTTP/1.1" 200 -
+12/09/2021 10:24:51 AM Article <sqlite3.Row object at 0x1055aff30> retrieved
+12/09/2021 10:24:51 AM 127.0.0.1 - - [09/Dec/2021 10:24:51] "GET /6 HTTP/1.1" 200 -
+12/09/2021 10:24:54 AM Article <sqlite3.Row object at 0x105731310> retrieved
+12/09/2021 10:24:54 AM 127.0.0.1 - - [09/Dec/2021 10:24:54] "GET /7 HTTP/1.1" 200 -
+12/09/2021 10:25:33 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:25:33 AM 127.0.0.1 - - [09/Dec/2021 10:25:33] "GET / HTTP/1.1" 200 -
+12/09/2021 10:25:34 AM Article 1 retrieved
+12/09/2021 10:25:34 AM 127.0.0.1 - - [09/Dec/2021 10:25:34] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:25:37 AM Article 2 retrieved
+12/09/2021 10:25:37 AM 127.0.0.1 - - [09/Dec/2021 10:25:37] "GET /2 HTTP/1.1" 200 -
+12/09/2021 10:25:40 AM Article 3 retrieved
+12/09/2021 10:25:40 AM 127.0.0.1 - - [09/Dec/2021 10:25:40] "GET /3 HTTP/1.1" 200 -
+12/09/2021 10:26:49 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:26:49 AM 127.0.0.1 - - [09/Dec/2021 10:26:49] "GET / HTTP/1.1" 200 -
+12/09/2021 10:26:50 AM Article 2020 CNCF Annual Report retrieved
+12/09/2021 10:26:50 AM 127.0.0.1 - - [09/Dec/2021 10:26:50] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:26:53 AM Article KubeCon + CloudNativeCon 2021 retrieved
+12/09/2021 10:26:53 AM 127.0.0.1 - - [09/Dec/2021 10:26:53] "GET /2 HTTP/1.1" 200 -
+12/09/2021 10:26:54 AM Article 2020 CNCF Annual Report retrieved
+12/09/2021 10:26:54 AM 127.0.0.1 - - [09/Dec/2021 10:26:54] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:31:45 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:31:49 AM 127.0.0.1 - - [09/Dec/2021 10:31:49] "GET / HTTP/1.1" 200 -
+12/09/2021 10:31:52 AM Article 2020 CNCF Annual Report retrieved
+12/09/2021 10:31:52 AM 127.0.0.1 - - [09/Dec/2021 10:31:52] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:31:54 AM Article KubeCon + CloudNativeCon 2021 retrieved
+12/09/2021 10:31:54 AM 127.0.0.1 - - [09/Dec/2021 10:31:54] "GET /2 HTTP/1.1" 200 -
+12/09/2021 10:31:57 AM Article Kubernetes v1.20 Release Notes retrieved
+12/09/2021 10:31:57 AM 127.0.0.1 - - [09/Dec/2021 10:31:57] "GET /3 HTTP/1.1" 200 -
+12/09/2021 10:32:04 AM 127.0.0.1 - - [09/Dec/2021 10:32:04] "GET /create HTTP/1.1" 200 -
+12/09/2021 10:32:24 AM Article Myy New Post created
+12/09/2021 10:32:24 AM 127.0.0.1 - - [09/Dec/2021 10:32:24] "POST /create HTTP/1.1" 302 -
+12/09/2021 10:32:24 AM 127.0.0.1 - - [09/Dec/2021 10:32:24] "GET / HTTP/1.1" 200 -
+12/09/2021 10:32:30 AM Article 2020 CNCF Annual Report retrieved
+12/09/2021 10:32:30 AM 127.0.0.1 - - [09/Dec/2021 10:32:30] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:32:35 AM Article with id None is non existing in database
+12/09/2021 10:32:35 AM 127.0.0.1 - - [09/Dec/2021 10:32:35] "GET /123 HTTP/1.1" 404 -
+12/09/2021 10:32:41 AM 127.0.0.1 - - [09/Dec/2021 10:32:41] "GET /create HTTP/1.1" 200 -
+12/09/2021 10:34:10 AM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 10:34:12 AM About Us is retrieved
+12/09/2021 10:34:12 AM 127.0.0.1 - - [09/Dec/2021 10:34:12] "GET /about HTTP/1.1" 200 -
+12/09/2021 10:34:14 AM 127.0.0.1 - - [09/Dec/2021 10:34:14] "GET / HTTP/1.1" 200 -
+12/09/2021 10:34:15 AM Article 2020 CNCF Annual Report retrieved
+12/09/2021 10:34:15 AM 127.0.0.1 - - [09/Dec/2021 10:34:15] "GET /1 HTTP/1.1" 200 -
+12/09/2021 10:34:16 AM 127.0.0.1 - - [09/Dec/2021 10:34:16] "GET / HTTP/1.1" 200 -
+12/09/2021 10:34:17 AM Article Kubernetes v1.20 Release Notes retrieved
+12/09/2021 10:34:17 AM 127.0.0.1 - - [09/Dec/2021 10:34:17] "GET /3 HTTP/1.1" 200 -
+12/09/2021 10:34:21 AM Article with id 110 is non existing in database
+12/09/2021 10:34:21 AM 127.0.0.1 - - [09/Dec/2021 10:34:21] "GET /110 HTTP/1.1" 404 -
+12/09/2021 02:07:36 PM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
+12/09/2021 02:07:40 PM 127.0.0.1 - - [09/Dec/2021 14:07:40] "GET / HTTP/1.1" 200 -
+12/09/2021 02:07:40 PM 127.0.0.1 - - [09/Dec/2021 14:07:40] "GET /static/css/main.css HTTP/1.1" 200 -
+12/09/2021 02:07:41 PM 127.0.0.1 - - [09/Dec/2021 14:07:41] "GET /favicon.ico HTTP/1.1" 404 -
+12/09/2021 03:19:18 PM  * Running on http://0.0.0.0:3112/ (Press CTRL+C to quit)
