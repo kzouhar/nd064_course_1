@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: techtrends
+    tag: techtrends:latest
+  name: techtrends
+  namespace: sandbox
+spec:
+  replicas: techtrends:latest
+  selector:
+    matchLabels:
+      app: techtrends
+      tag: techtrends:latest
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: techtrends
+        tag: techtrends:latest
+    spec:
+      containers:
+      - image: techtrends:latest
+        imagePullPolicy: IfNotPresent
+        name: techtrends
+        ports:
+          - containerPort: 3111
+            protocol: TCP
+          readinessProbe:
+            httpGet:
+              scheme: HTTPS
+              path: /healthz
+              port: 3111
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              scheme: HTTPS
+              path: /healthz
+              port: 3111
+            initialDelaySeconds: 10
+            periodSeconds: 5
