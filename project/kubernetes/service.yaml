@@ -3,7 +3,6 @@ kind: Service
 metadata:
   labels:
     app: techtrends
-    tag: techtrends:latest
   name: techtrends
   namespace: sandbox
 spec:
@@ -13,6 +12,5 @@ spec:
     targetPort: 3111
   selector:
     app: techtrends
-    tag: techtrends:latest
   type: ClusterIP
 
