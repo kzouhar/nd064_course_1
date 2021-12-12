@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   labels:
     app: techtrends
-    tag: techtrends:latest
   name: techtrends
   namespace: sandbox
 spec:
@@ -11,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: techtrends
-      tag: techtrends:latest
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -21,7 +19,6 @@ spec:
     metadata:
       labels:
         app: techtrends
-        tag: techtrends:latest
     spec:
       containers:
       - image: techtrends:latest
