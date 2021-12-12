@@ -5,7 +5,7 @@ metadata:
     app: techtrends
     tag: techtrends:latest
   name: techtrends
-  namespace: sandbox
+  namespace: default
 spec:
   replicas: techtrends:latest
   selector:
