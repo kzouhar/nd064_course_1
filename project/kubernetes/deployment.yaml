@@ -29,14 +29,14 @@ spec:
             protocol: TCP
         readinessProbe:
           httpGet:
-            scheme: HTTPS
+            scheme: HTTP
             path: /healthz
             port: 3112
           initialDelaySeconds: 10
           periodSeconds: 5
         readinessProbe:
           httpGet:
-            scheme: HTTPS
+            scheme: HTTP
             path: /healthz
             port: 3112
           initialDelaySeconds: 10
