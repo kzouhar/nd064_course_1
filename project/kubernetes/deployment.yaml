@@ -30,17 +30,17 @@ spec:
         ports:
           - containerPort: 3111
             protocol: TCP
-          readinessProbe:
-            httpGet:
-              scheme: HTTPS
-              path: /healthz
-              port: 3111
-            initialDelaySeconds: 10
-            periodSeconds: 5
-          readinessProbe:
-            httpGet:
-              scheme: HTTPS
-              path: /healthz
-              port: 3111
-            initialDelaySeconds: 10
-            periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            scheme: HTTPS
+            path: /healthz
+            port: 3111
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            scheme: HTTPS
+            path: /healthz
+            port: 3111
+          initialDelaySeconds: 10
+          periodSeconds: 5
