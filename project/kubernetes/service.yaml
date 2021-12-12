@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 4111
     protocol: TCP
-    targetPort: 3111
+    targetPort: 3112
   selector:
     app: techtrends
   type: ClusterIP
