@@ -2,6 +2,7 @@ import sqlite3
 import logging
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 
+connection_count = 0
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
@@ -11,6 +12,7 @@ def get_db_connection():
 
 # Function to get a post using its ID
 def get_post(post_id):
+
     connection = get_db_connection()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
@@ -71,8 +73,8 @@ def create():
 
 @app.route('/healthz')
 def healthz():
-    app.logger.info('Health check successfull')
-    return app.response_class(response=json.dumps("result: OK - healthy"),
+    app.logger.info('Health check successful')
+    return app.response_class(response=json.dumps("{\"result\":\"OK - health\"}"),
                        status=200,
                        mimetype='application/json'
                        )
@@ -82,7 +84,7 @@ def metrics():
     connection = get_db_connection()
     row = connection.execute('SELECT count(*) c FROM posts').fetchone()
     app.logger.info('Metrics request successfull')
-    return app.response_class(response=json.dumps("db_connection_count: {},post_count: {}".format(1, row[0])),
+    return app.response_class(response=json.dumps("{" +"\"db_connection_count\": {},\"post_count\": {}".format(1, row[0])) + "}",
                        status=200,
                        mimetype='application/json'
                        )
@@ -90,5 +92,5 @@ def metrics():
 # start the application on port 3111
 if __name__ == "__main__":
    ## stream logs to app.log file
-   logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+   logging.basicConfig(level=logging.DEBUG, format='%(levelname)s:%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
    app.run(host='0.0.0.0', port='3112')
