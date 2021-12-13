@@ -3,7 +3,7 @@ service_port: 4111
 service_target_port: 3111
 service_protocol: TCP
 type: ClusterIP
-image: techtrends
+image: kzouhar/techtrends
 tag: latest
 pullPolicy: IfNotPresent
 replicaCount: 1
