@@ -9,7 +9,7 @@ spec:
   ports:
   - port: {{.Values.service_port}}
     protocol: TCP
-    targetPort: {{.values.service_target_port}}
+    targetPort: {{.Values.service_target_port}}
   selector:
     tag: {{.Values.tag}}
   type: {{.Values.service_type}}
