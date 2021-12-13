@@ -42,4 +42,4 @@ jobs:
           file: ./project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: kzouhar/techtrends:1.0
+          tags: kzouhar/techtrends:latest
