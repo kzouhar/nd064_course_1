@@ -1,5 +1,0 @@
-# build a docker file
-docker build -t techtrends:latest  .
-
-# deploy docker image locally
-docker run -dp 7111:3112 techtrends:latest
