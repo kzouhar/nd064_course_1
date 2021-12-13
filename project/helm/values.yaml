@@ -4,7 +4,7 @@ service_target_port: 3111
 service_protocol: TCP
 type: ClusterIP
 image: kzouhar/techtrends
-tag: latest
+tag: 1.0
 pullPolicy: IfNotPresent
 replicaCount: 1
 requests_memory: 64Mi
