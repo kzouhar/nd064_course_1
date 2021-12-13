@@ -1,4 +1,4 @@
-namespace: staging
+namespace: prod
 service_port: 5111
 service_target_port: 3111
 replicaCount: 5
