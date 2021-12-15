@@ -1,8 +1,12 @@
-namespace: staging
-service_port: 5111
-service_target_port: 3111
+namespace:
+  name: staging
+service:
+  port: 5111
+  targetPort: 3111
 replicaCount: 3
-requests_memory: 90Mi
-request_cpu: 300m
-limit_memory: 128Mi
-limit_cpu:  500m
+requests:
+  memory: 90Mi
+  cpu: 300m
+limit:
+  memory: 128Mi
+  cpu:  500m
