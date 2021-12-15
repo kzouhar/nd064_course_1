@@ -24,4 +24,20 @@ spec:
       containers:
       - image: {{.Values.image}}:{{.Values.tag}}
         imagePullPolicy: {{.Values.pullPolicy}}
-        name: techtrends
+        name: techtrend
+        - containerPort: 3112
+          protocol: TCP
+        livelnessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /healthz
+            port: 3112
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /healthz
+            port: 3112
+          initialDelaySeconds: 10
+          periodSeconds: 5s
