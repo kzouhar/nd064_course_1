@@ -15,7 +15,6 @@ requests:
   cpu: 250m
 limit:
   memory: 128Mi
-limit:
   cpu:  500m
 containerPort: 3111
 readinessProbe:
