@@ -30,12 +30,8 @@ spec:
             scheme: HTTP
             path: /healthz
             port: 3112
-          initialDelaySeconds: 10
-          periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /healthz
             port: 3112
-          initialDelaySeconds: 10
-          periodSeconds: 5s
