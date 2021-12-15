@@ -27,7 +27,7 @@ spec:
         ports:
           - containerPort: 3112
             protocol: TCP
-        readinessProbe:
+        livenessProbe:
           httpGet:
             scheme: HTTP
             path: /healthz
