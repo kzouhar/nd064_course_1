@@ -2,10 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: techtrends
-    tag: techtrend
-  name: techtrends
-  namespace: {{.Values.namespace}}
+    app: {{.Values.AppName}}
+  name: {{.Values.AppName}}
+  namespace: {{.Values.namespace.name}}
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
@@ -24,14 +23,16 @@ spec:
       containers:
       - image: {{.Values.image}}:{{.Values.tag}}
         imagePullPolicy: {{.Values.pullPolicy}}
-        name: techtrend
+        name: {{Values.AppName}}
         livenessProbe:
           httpGet:
-            scheme: HTTP
-            path: /healthz
-            port: 3112
+            path: {{ .Values.livenessProbe.path }}
+            port: {{ .Values.livenessProbe.port }}
+          initialDelaySeconds: 30
+          periodSeconds: 3
         readinessProbe:
           httpGet:
-            scheme: HTTP
-            path: /healthz
-            port: 3112
+            path: {{ .Values.readinessProbe.path }}
+            port: {{ .Values.readinessProbe.port }}
+          initialDelaySeconds: 30
+          periodSeconds: 3

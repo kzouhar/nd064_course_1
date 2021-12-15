@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    tag: {{.Values.tag}}
-  name: techtrends
-  namespace: {{.Values.namespace}}
+   app: {{.Values.AppName}} 
+  name: {{.Values.AppName}}
+  namespace: {{.Values.namespace.name}}
 spec:
   ports:
-  - port: {{.Values.service_port}}
-    protocol: TCP
-    targetPort: {{.Values.service_target_port}}
+  - port: {{.Values.service.port}}
+    protocol: {{.Values.service.protocol}}
+    targetPort: {{.Values.service.targetPort}}
   selector:
-    tag: {{.Values.tag}}
-  type: {{.Values.service_type}}
+    app: {{.Values.AppName}}
+  type: {{.Values.service.type}}
