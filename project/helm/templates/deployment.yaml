@@ -23,7 +23,7 @@ spec:
       containers:
       - image: {{.Values.image}}:{{.Values.tag}}
         imagePullPolicy: {{.Values.pullPolicy}}
-        name: {{Values.AppName}}
+        name: {{.Values.AppName}}
         livenessProbe:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
