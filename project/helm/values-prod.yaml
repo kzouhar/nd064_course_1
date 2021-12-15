@@ -1,8 +1,13 @@
-namespace: prod
-service_port: 5111
-service_target_port: 3111
+namespace:
+  name: prod
+service:
+  port: 5111
+  targetPort: 3111
 replicaCount: 5
-requests_memory: 90Mi
-request_cpu: 300m
-limit_memory: 128Mi
-limit_cpu: 256m
+requests:
+  memory: 128Mi
+  cpu: 350m
+limit:
+  memory: 256Mi
+  cpu:  500m
+
