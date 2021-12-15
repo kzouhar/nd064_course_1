@@ -37,7 +37,6 @@ def index():
 @app.route('/<int:post_id>')
 def post(post_id):
     post = get_post(post_id)
-    app.connection_count = app.connection_count + 1
     if post is None:
       app.logger.info('Article with id {} is non existing in database'.format(post_id))
       return render_template('404.html'), 404
