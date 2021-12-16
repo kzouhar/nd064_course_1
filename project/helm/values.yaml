@@ -16,10 +16,10 @@ requests:
 limit:
   memory: 128Mi
   cpu:  500m
-containerPort: 3112
+containerPort: 3111
 readinessProbe:
    path: /healthz
    port: 3112
 livenessProbe:
    path: /healthz
-   port: 3112
+   port: 3111

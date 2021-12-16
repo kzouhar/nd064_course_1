@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 CMD ["sh", "./start_app.sh"]
 
-EXPOSE 7111
+EXPOSE 3111

@@ -1,11 +1,15 @@
 import sqlite3
 import logging
+import sys
+
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 
 # Define the Flask application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 app.connection_count = 0
+
+stdout_fileno = sys.stdout
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -92,8 +96,30 @@ def metrics():
                        mimetype='application/json'
                        )
 
+
+class LessThenFilter(logging.Filter):
+    def __init__(self, level):
+        self._level = level
+        logging.Filter.__init__(self)
+
+    def filter(self, rec):
+        return rec.levelno < self._level
+
 # start the application on port 3111
 if __name__ == "__main__":
    ## stream logs to app.log file
-   logging.basicConfig(level=logging.DEBUG, format='%(levelname)s:%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
-   app.run(host='0.0.0.0', port='3112')
+   logging.basicConfig(
+       level=logging.DEBUG,
+       format='%(levelname)s:%(asctime)s %(message)s',
+       datefmt='%m/%d/%Y %I:%M:%S %p',
+       handlers=[
+           logging.StreamHandler(sys.stdout)
+           logging.StreamHandler(sys.stderr)
+       ]
+   )
+
+
+   app.run(host='0.0.0.0', port="3111")
+
+
+

@@ -25,19 +25,19 @@ spec:
         imagePullPolicy: IfNotPresent
         name: techtrends
         ports:
-          - containerPort: 3112
+          - containerPort: 3111
             protocol: TCP
         livenessProbe:
           httpGet:
             scheme: HTTP
             path: /healthz
-            port: 3112
+            port: 3111
           initialDelaySeconds: 10
           periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /healthz
-            port: 3112
+            port: 3111
           initialDelaySeconds: 10
           periodSeconds: 5
